@@ -7,7 +7,6 @@ source ~/.bashrc
 sudo dnf -y install emacs-nox
 mv emacs.d .emacs.d/
 mv -f user-dirs.dirs .config/
-#sudo mv main.conf /etc/bluetooth
 sudo mv dnf.conf /etc/dnf
 sudo mv custom.conf /etc/gdm/
 
@@ -36,7 +35,6 @@ sudo dnf -y upgrade
 
 #install-----------------------------
 sudo dnf -y install java-11-openjdk-devel
-#sudo snap install discord
 
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
@@ -48,13 +46,13 @@ sudo dnf -y install ibus-mozc
 #sudo snap install onlyoffice-desktopeditors
 sudo dnf -y install mpg123
 sudo dnf -y install ImageMagick
-#sudo dnf -y install r-base
+sudo dnf -y install r-base
 #sudo dnf -y install ./first/rstudio*.deb
 sudo dnf -y install xrandr
 sudo dnf -y install x11vnc
 
-sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf -y install obs-studio
+#sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf -y install obs-studio
 sudo yum -y localinstall first/zoom_x86_64.rpm 
 
 sudo systemctl start httpd.service
@@ -64,7 +62,6 @@ sudo systemctl start mariadb.service
 sudo mysql_secure_installation
 sudo systemctl status mariadb
 sudo dnf -y install php php-common
-sudo dnf -y install thunderbird
 
 #configure system settings-----------------------------
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
@@ -126,28 +123,6 @@ desk changer
 		add folder ./pictures/wallpaper
 	daemon 30 min interval
 
-thunderbird
-	univ mail settings
-					incoming				outcoming
-		protocol	IMAP					SMTP
-		server		outlook.office365.com	smtp.office365.com
-		port 		993						587
-		ssl			SSL/TLS	`				STARTTLS
-
-	theme
-		Tools > add-ons
-		install "dark reader"
-
-	gmail
-		File > New > Existing Mail Account
-		enter account info
-		protocol=IMAP
-
-	appearance
-		sort mails according to date
-		show nothing in inbox
-		apply columns to folders and children in all accounts
-
 printer
 	Ctrl+P on brave browser
 	Destination=see more
@@ -162,13 +137,6 @@ univ wifi eduroam
 	静大ID@shizuoka.ac.jp
 	静大ID password
 
-slack
-	preferences
-		themes -> dark
-		advanced -> uncheck Leave app running ~
-
-discord
-
 zoom
 	settings
 		video
@@ -177,5 +145,5 @@ zoom
 			automatically~
 			mute~
 
-disable etc/bluetooth/main.conf?
+disable etc/bluetooth/main.conf
 """
