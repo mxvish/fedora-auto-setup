@@ -1,7 +1,7 @@
 # fedora_auto_setup
 My configuration files to setup fedora
 
-<b>usage</b>
+## usage
 <pre>
 sh rpmsetup.sh
 </pre>
