@@ -1,11 +1,9 @@
-#mv /media/pmbok/UNTITLED/* ./
+#mv /run/media/kenter/UNTITLED/* ./
 #sudo sh rpmsetup.sh 
 
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 source ~/.bashrc
-sudo dnf -y install emacs-nox
-mv emacs.d .emacs.d/
 mv -f user-dirs.dirs .config/
 sudo mv dnf.conf /etc/dnf
 sudo mv custom.conf /etc/gdm/
@@ -55,14 +53,6 @@ sudo dnf -y install x11vnc
 #sudo dnf -y install obs-studio
 sudo yum -y localinstall first/zoom_x86_64.rpm 
 
-sudo systemctl start httpd.service
-sudo systemctl status httpd.service
-sudo dnf -y install mariadb-server
-sudo systemctl start mariadb.service
-sudo mysql_secure_installation
-sudo systemctl status mariadb
-sudo dnf -y install php php-common
-
 #configure system settings-----------------------------
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.desktop.notifications show-banners false
@@ -81,7 +71,7 @@ gsettings set org.gnome.shell disable-user-extensions true
 gsettings set org.gnome.desktop.search-providers disable-external true
 
 sudo dnf -y autoremove
-sudo dnf -y autoclean
+sudo dnf -y clean all
 reboot
 """
 settings
@@ -100,9 +90,6 @@ settings
 		settings
 		hide all normal windows
 		close window
-
-emacs
-	M-x package install <RET> company
 
 brave-browser
 	bravepasswd from onedrive
