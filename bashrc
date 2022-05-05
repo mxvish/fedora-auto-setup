@@ -10,6 +10,7 @@
 #systemctl get-default
 #sudo systemctl set-default multi-user.target(graphical.target)
 #mpg123 -f 3200 *.mp3
+#sudo dnf -y install gnome-disk-utility
 
 alias b='brave-browser'
 alias c='java ~/first/cd.java'
