@@ -41,6 +41,7 @@ sudo dnf -y install ImageMagick
 #sudo snap install onlyoffice-desktopeditors
 sudo dnf -y install mpg123
 sudo dnf -y install R-core
+sudo dnf -y install ranger
 #sudo dnf -y install ./first/rstudio*.deb
 sudo dnf -y install xrandr
 #sudo dnf -y install x11vnc
