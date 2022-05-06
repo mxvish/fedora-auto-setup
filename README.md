@@ -1,4 +1,4 @@
-# fedora_auto_setup
+# fedora-auto-setup
 My configuration files to setup fedora
 
 ## usage
