@@ -49,6 +49,11 @@ sudo dnf -y install r-base
 sudo dnf -y install xrandr
 sudo dnf -y install x11vnc
 
+sudo dnf -y install vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo dnf -y install nodejs
+mv vimrc .vimrc
+
 #sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 #sudo dnf -y install obs-studio
 #sudo yum -y localinstall first/zoom_x86_64.rpm 
