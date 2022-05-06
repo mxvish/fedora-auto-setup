@@ -51,7 +51,7 @@ sudo dnf -y install x11vnc
 
 #sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 #sudo dnf -y install obs-studio
-sudo yum -y localinstall first/zoom_x86_64.rpm 
+#sudo yum -y localinstall first/zoom_x86_64.rpm 
 
 #configure system settings-----------------------------
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
@@ -69,6 +69,15 @@ gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.shell disable-user-extensions true
 gsettings set org.gnome.desktop.search-providers disable-external true
+
+sudo vi /etc/default/grub
+"""
+edit as follows
+...(snip)...
+GRUB_CMDLINE_LINUX="rhgb quiet psmouse.synaptics_intertouch=1"
+...(snip)...
+"""
+sudo grub2-mkconfig
 
 sudo dnf -y autoremove
 sudo dnf -y clean all
