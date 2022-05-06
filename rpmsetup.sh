@@ -105,7 +105,7 @@ brave-browser
 	Don't allow sites to send notifications
 	sync everything
 	appearance=dark
-		disable always show bookmarks
+		disable Always show bookmarks on new tab page
 	enable Speedreader
 	enable
 		https://extensions.gnome.org/extension/1131/
