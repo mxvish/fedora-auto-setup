@@ -1,6 +1,3 @@
-#mv /run/media/kenter/UNTITLED/* ./
-#sudo sh rpmsetup.sh 
-
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 source ~/.bashrc
@@ -32,8 +29,6 @@ sudo dnf -y update
 sudo dnf -y upgrade
 
 #install-----------------------------
-sudo dnf -y install java-11-openjdk-devel
-
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
@@ -41,21 +36,20 @@ sudo dnf -y install brave-browser
 
 sudo dnf -y install chrome-gnome-shell
 sudo dnf -y install ibus-mozc
+sudo dnf -y install ImageMagick
+#sudo dnf -y install java-11-openjdk-devel
 #sudo snap install onlyoffice-desktopeditors
 sudo dnf -y install mpg123
-sudo dnf -y install ImageMagick
-sudo dnf -y install r-base
+sudo dnf -y install R-core
 #sudo dnf -y install ./first/rstudio*.deb
 sudo dnf -y install xrandr
-sudo dnf -y install x11vnc
+#sudo dnf -y install x11vnc
 
 sudo dnf -y install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 sudo dnf -y install nodejs
 mv vimrc .vimrc
 
-#sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-#sudo dnf -y install obs-studio
 #sudo yum -y localinstall first/zoom_x86_64.rpm 
 
 #configure system settings-----------------------------
