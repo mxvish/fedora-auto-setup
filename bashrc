@@ -4,13 +4,12 @@
 #x11vnc -storepasswd
 #x11vnc -usepw
 #/usr/bin/time $SHELL -i -c exit
-#ping raspberrypi.local
 #source mysql.sql 
-#winecfg
 #systemctl get-default
 #sudo systemctl set-default multi-user.target(graphical.target)
 #mpg123 -f 3200 *.mp3
 #sudo dnf -y install gnome-disk-utility
+#change battery setting to power saver
 
 alias b='brave-browser'
 alias c='java ~/first/cd.java'
@@ -20,7 +19,7 @@ alias cl='sudo dnf -y autoremove; sudo dnf -y clean all'
 alias d='brave-browser drive.google.com/drive/my-drive'
 alias ds='dnf search'
 alias g='brave-browser gakujo.shizuoka.ac.jp/portal/'
-alias gi='brave-browser github.com/kenteroshima'
+alias gi='brave-browser github.com/mxvish'
 alias ht='sh ~/first/ht.sh'
 alias ke='brave-browser keep.google.com'
 alias l='ls -a ~/downloads'
@@ -30,13 +29,12 @@ alias op='vi ~/.bashrc;source ~/.bashrc'
 alias open='brave-browser'
 alias p='python3 -O'
 alias re='systemctl reboot -i'
-alias s='systemctl suspend -i'
+alias s='brave-browser app.slack.com/client'
 alias sc='gsettings set org.gnome.desktop.interface text-scaling-factor'
 alias sd='sudo dnf -y install'
-alias sl='brave-browser app.slack.com/client'
 alias sr='sudo dnf -y remove'
+alias ss='systemctl suspend -i'
 alias t='brave-browser todoist.com/app/upcoming'
-alias tra='sudo rmmod psmouse; sudo modprobe psmouse proto=imps;rm -r ~/Downloads;sh ~/first/tr.sh'
 alias tr='sh ~/first/tr.sh'
 alias u='sudo dnf -y upgrade; sudo dnf -y update'
 alias visa='brave-browser docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/'
