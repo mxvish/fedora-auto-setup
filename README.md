@@ -1,8 +1,9 @@
 # fedora-auto-setup
 My configuration files to setup fedora
 
-## usage
+## Installation & Usage
 <pre>
-sh rpmsetup.sh
+git clone https://github.com/mxvish/fedora-auto-setup.git
+mv fedora-auto-setup/* ~/
+sudo sh rpmsetup.sh
 </pre>
-in your home directory
