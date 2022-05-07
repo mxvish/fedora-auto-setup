@@ -40,7 +40,11 @@ sudo dnf -y install ImageMagick
 #sudo dnf -y install java-11-openjdk-devel
 #sudo snap install onlyoffice-desktopeditors
 sudo dnf -y install mpg123
+
+sudo dnf -y install pip
+sudo dnf -y install python-tkinter
 sudo dnf -y install R-core
+
 sudo dnf -y install ranger
 #sudo dnf -y install ./first/rstudio*.deb
 sudo dnf -y install xrandr
