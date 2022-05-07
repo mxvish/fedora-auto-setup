@@ -22,6 +22,7 @@ alias g='brave-browser gakujo.shizuoka.ac.jp/portal/'
 alias gi='brave-browser github.com/mxvish'
 alias ke='brave-browser keep.google.com'
 alias l='ls -a ~/downloads'
+alias m='brave-browser "https://mail.google.com/mail/u/0/h/";brave-browser "https://mail.google.com/mail/u/1/h/"' 
 alias mk='mkdir'
 alias o='brave-browser onedrive.live.com'
 alias op='vi ~/.bashrc;source ~/.bashrc'
@@ -30,23 +31,22 @@ alias p='python3 -O'
 alias r='ranger'
 alias re='systemctl reboot -i'
 alias s='brave-browser app.slack.com/client'
-alias sc='gsettings set org.gnome.desktop.interface text-scaling-factor'
 alias sd='sudo dnf -y install'
 alias sr='sudo dnf -y remove'
 alias ss='systemctl suspend -i'
 alias t='brave-browser todoist.com/app/upcoming'
-alias tr='sh ~/first/tr.sh'
 alias u='sudo dnf -y upgrade; sudo dnf -y update'
 alias v='vim'
 alias visa='brave-browser docs.google.com/spreadsheets/d/1iuQ-DxULNRZp0QisqnwkH33GpLA8dkec/'
 alias vpn='brave-browser https://vpn.inf.shizuoka.ac.jp/dana-na/auth/url_3/welcome.cgi'
 alias vr='vi ~/rpmsetup.sh'
+alias xc='xclip -sel c <'   
 alias xd='xdg-open'
 alias xdd='xdg-open ./'
 alias xe='xrandr --output eDP-1 --brightness'
 alias xh='xrandr --output HDMI-1 --brightness'
 alias Wc='sh ~/Wc.sh'
-alias y='brave-browser youtube.com/playlist?list=WL'
+alias y='brave-browser youtube.com/playlist?list=LL'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -165,6 +165,25 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+xrandr --output eDP-1 --brightness 0.7                                          
+xrandr --output HDMI-1 --brightness 0.5
+
+#configure system settings-----------------------------
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.notifications show-banners false
+gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+xrandr --output HDMI-1 --left-of eDP-1
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'mozc-jp')]"
+timedatectl set-timezone Asia/Tokyo
+gsettings set org.gnome.shell favorite-apps []
+
+#configure system settings from tweaks-----------------------------
+gsettings set org.gnome.desktop.background picture-options none
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
+gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+gsettings set org.gnome.desktop.search-providers disable-external true
 
 PROMPT_COMMAND="printf '\n';$PROMPT_COMMAND"
 export PS1="\W \$"
