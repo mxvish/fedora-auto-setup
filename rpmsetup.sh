@@ -73,6 +73,7 @@ gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.shell disable-user-extensions true
 gsettings set org.gnome.desktop.search-providers disable-external true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 sudo vi /etc/default/grub
 """
@@ -113,7 +114,6 @@ brave-browser
 		disable Always show bookmarks on new tab page
 	enable Speedreader
 	enable
-		https://extensions.gnome.org/extension/1131/
 		https://extensions.gnome.org/extension/1471/
 	new tab page -> new tabs page shows blank page
 
