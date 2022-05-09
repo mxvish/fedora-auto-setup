@@ -45,7 +45,6 @@ alias xd='xdg-open'
 alias xdd='xdg-open ./'
 alias xe='xrandr --output eDP-1 --brightness'
 alias xh='xrandr --output HDMI-1 --brightness'
-alias Wc='sh ~/Wc.sh'
 alias y='brave-browser youtube.com/playlist?list=LL'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
