@@ -11,20 +11,6 @@ mv Public .Public
 rm -rf Templates Documents Music Pictures Videos
 mkdir downloads
 
-#remove-----------------------------
-sudo dnf -y remove gnome-calendar
-sudo dnf -y remove gnome-contacts
-sudo dnf -y remove firefox
-sudo dnf -y remove gedit
-sudo dnf -y remove gnome-maps
-sudo dnf -y remove gnome-photos
-sudo dnf -y remove gnome-tour
-sudo dnf -y remove gnome-weather
-sudo dnf -y remove rhythmbox
-sudo dnf -y remove cheese
-sudo dnf -y remove gnome-calculator
-sudo dnf -y remove gnome-clocks
-
 sudo dnf -y update
 sudo dnf -y upgrade
 
