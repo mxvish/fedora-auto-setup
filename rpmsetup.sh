@@ -21,15 +21,15 @@ packages=(
 	brave-browser
 	emacs-nox
 	ibus-mozc
-	neofetch
 	mpg123
+	neofetch
 	pip
 	python-tkinter
 	R-core
 	ranger
 	xfce4-terminal
-	xrandr
 	xorg-x11-server-Xorg
+	xrandr
 )
 
 for i in "${packages[@]}"; do sudo dnf -yq install "$i"; done
