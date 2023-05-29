@@ -4,15 +4,9 @@
 
 #edit & mv files-----------------------------
 mv bashrc .bashrc
-source ~/.bashrc
-mv -f user-dirs.dirs .config/
 sudo mv dnf.conf /etc/dnf
 sudo mv custom.conf /etc/gdm/
 
-mv Desktop .Desktop
-mv Downloads .Downloads
-mv Public .Public
-rm -rf Templates Documents Music Pictures Videos
 mkdir downloads
 
 sudo dnf -y update
@@ -47,25 +41,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 sudo dnf -y install nodejs
 mv vimrc .vimrc
 
-#sudo yum -y localinstall first/zoom_x86_64.rpm 
-
 #configure system settings-----------------------------
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-gsettings set org.gnome.desktop.notifications show-banners false
-gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 xrandr --output HDMI-1 --left-of eDP-1 
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'mozc-jp')]"
 timedatectl set-timezone Asia/Tokyo
-gsettings set org.gnome.shell.extensions.desktop-icons show-home false
-gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
-gsettings set org.gnome.desktop.background picture-options none
-gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
-
-gsettings set org.gnome.desktop.interface enable-animations false
-gsettings set org.gnome.software download-updates false
-gsettings set org.gnome.shell disable-user-extensions true
-gsettings set org.gnome.desktop.search-providers disable-external true
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 sudo vi /etc/default/grub
 """
@@ -80,23 +58,6 @@ sudo dnf -y autoremove
 sudo dnf -y clean all
 reboot
 """
-settings
-	search 
-		turn off
-	keyboard
-		view and customize ~
-			navigation
- 				switch windows directly=alt+tab
-		custom shortcuts
-			open terminal
-
-	battery settings
-		balanced ->	power saver
-	keyboard shortcuts
-		settings
-		hide all normal windows
-		close window
-
 brave-browser
 	bravepasswd from onedrive
   	remove all history & autofill form data on exit
@@ -108,12 +69,6 @@ brave-browser
 	enable
 		https://extensions.gnome.org/extension/1471/
 	new tab page -> new tabs page shows blank page
-
-desk changer
-	profiles -> location URI
-		remove item /usr/share/*
-		add folder ./pictures/wallpaper
-	daemon 30 min interval
 
 printer
 	Ctrl+P on brave browser
