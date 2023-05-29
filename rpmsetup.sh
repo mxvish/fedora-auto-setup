@@ -1,3 +1,7 @@
+#nmcli radio wifi
+#nmcli device wifi list
+nmcli device wifi connect $SSID password $password
+
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 source ~/.bashrc
