@@ -5,6 +5,7 @@
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 sudo mv dnf.conf /etc/dnf
+sudo mv grub /etc/default/
 
 mkdir downloads
 
@@ -44,13 +45,6 @@ mv vimrc .vimrc
 xrandr --output HDMI-1 --left-of eDP-1 
 timedatectl set-timezone Asia/Tokyo
 
-sudo vi /etc/default/grub
-"""
-edit as follows
-...(snip)...
-GRUB_CMDLINE_LINUX="rhgb quiet psmouse.synaptics_intertouch=1"
-...(snip)...
-"""
 sudo grub2-mkconfig
 
 sudo dnf -y autoremove
