@@ -5,7 +5,7 @@
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 sudo mv dnf.conf /etc/dnf
-sudo mv custom.conf /etc/gdm/
+sudo mv grub /etc/default/
 
 mkdir downloads
 
@@ -19,17 +19,19 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 packages=(
 	brave-browser
+	i3
+	i3status
 	emacs-nox
 	ibus-mozc
-	neofetch
 	mpg123
+	neofetch
 	pip
 	python-tkinter
 	R-core
 	ranger
 	xfce4-terminal
-	xrandr
 	xorg-x11-server-Xorg
+	xrandr
 )
 
 for i in "${packages[@]}"; do sudo dnf -yq install "$i"; done
@@ -42,16 +44,21 @@ sudo dnf -y install nodejs
 mv vimrc .vimrc
 
 #configure system settings-----------------------------
+echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+\texec startx
+fi' >> .bash_profile
+
+echo 'xrdb ~/.Xresources
+exec i3' > .xinitrc
+
+echo 'clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R' > .Xmodmap
+
 xrandr --output HDMI-1 --left-of eDP-1 
 timedatectl set-timezone Asia/Tokyo
 
-sudo vi /etc/default/grub
-"""
-edit as follows
-...(snip)...
-GRUB_CMDLINE_LINUX="rhgb quiet psmouse.synaptics_intertouch=1"
-...(snip)...
-"""
 sudo grub2-mkconfig
 
 sudo dnf -y autoremove
