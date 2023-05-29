@@ -1,6 +1,6 @@
 #nmcli radio wifi
 #nmcli device wifi list
-nmcli device wifi connect $SSID password $password
+#nmcli device wifi connect $SSID password $password
 
 #edit & mv files-----------------------------
 mv bashrc .bashrc
@@ -22,25 +22,27 @@ sudo dnf -y upgrade
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-sudo dnf -y install brave-browser
 
-sudo dnf -y install chrome-gnome-shell
-sudo dnf -y install ibus-mozc
-sudo dnf -y install ImageMagick
+packages=(
+	brave-browser
+	emacs-nox
+	ibus-mozc
+	neofetch
+	mpg123
+	pip
+	python-tkinter
+	R-core
+	ranger
+	xfce4-terminal
+	xrandr
+	xorg-x11-server-Xorg
+)
+
+for i in "${packages[@]}"; do sudo dnf -yq install "$i"; done
+
 #sudo dnf -y install java-11-openjdk-devel
-#sudo snap install onlyoffice-desktopeditors
-sudo dnf -y install mpg123
-
-sudo dnf -y install pip
-sudo dnf -y install python-tkinter
-sudo dnf -y install R-core
-
-sudo dnf -y install ranger
-#sudo dnf -y install ./first/rstudio*.deb
-sudo dnf -y install xrandr
 #sudo dnf -y install x11vnc
 
-sudo dnf -y install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 sudo dnf -y install nodejs
 mv vimrc .vimrc
