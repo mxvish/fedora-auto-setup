@@ -5,7 +5,6 @@
 #edit & mv files-----------------------------
 mv bashrc .bashrc
 sudo mv dnf.conf /etc/dnf
-sudo mv custom.conf /etc/gdm/
 
 mkdir downloads
 
