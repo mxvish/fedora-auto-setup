@@ -19,6 +19,8 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 packages=(
 	brave-browser
+	i3
+	i3status
 	emacs-nox
 	ibus-mozc
 	mpg123
