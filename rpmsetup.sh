@@ -42,6 +42,18 @@ sudo dnf -y install nodejs
 mv vimrc .vimrc
 
 #configure system settings-----------------------------
+echo -e 'if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+\texec startx
+fi' >> .bash_profile
+
+echo 'xrdb ~/.Xresources
+exec i3' > .xinitrc
+
+echo 'clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R' > .Xmodmap
+
 xrandr --output HDMI-1 --left-of eDP-1 
 timedatectl set-timezone Asia/Tokyo
 
