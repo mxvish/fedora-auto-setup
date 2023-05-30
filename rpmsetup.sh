@@ -79,6 +79,9 @@ brave-browser
 		https://extensions.gnome.org/extension/1471/
 	new tab page -> new tabs page shows blank page
 
+fcitx5-configtool
+	addons -> input method selector -> trigger key
+		super + space
 printer
 	Ctrl+P on brave browser
 	Destination=see more
