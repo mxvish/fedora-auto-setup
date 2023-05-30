@@ -19,10 +19,10 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 packages=(
 	brave-browser
-	i3
-	i3status
 	emacs-nox
 	fcitx5-mozc
+	i3
+	i3status
 	mpg123
 	neofetch
 	pavucontrol
@@ -31,6 +31,7 @@ packages=(
 	R-core
 	ranger
 	xfce4-terminal
+	xinit
 	xorg-x11-server-Xorg
 	xrandr
 )
