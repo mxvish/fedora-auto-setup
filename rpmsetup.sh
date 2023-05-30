@@ -25,6 +25,7 @@ packages=(
 	ibus-mozc
 	mpg123
 	neofetch
+	pavucontrol
 	pip
 	python-tkinter
 	R-core
