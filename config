@@ -32,9 +32,9 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -114,7 +114,7 @@ exec --no-startup-id fcitx -d
 
 bindsym $mod+a exec brave-browser amazon.co.jp
 bindsym $mod+b exec brave-browser
-bindsym $mod+c exec java ~/cd.java
+bindsym $mod+c exec python3 ~/cd.py
 bindsym $mod+Shift+c exec brave-browser docs.google.com/spreadsheets/d/1ECwWvDWYEH4iZL_Hy9V2Xqy0NOVmpsAP/
 bindsym $mod+Ctrl+c exec brave-browser chat.openai.com
 bindsym $mod+e exec brave-browser keep.google.com
