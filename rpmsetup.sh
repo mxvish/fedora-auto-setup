@@ -22,7 +22,7 @@ packages=(
 	i3
 	i3status
 	emacs-nox
-	ibus-mozc
+	fcitx5-mozc
 	mpg123
 	neofetch
 	pavucontrol
